@@ -34,14 +34,18 @@ http.createServer((request, response) => {
                 if (json.method == 'get') {
                     axios.get(json.url).then(function(data) {
                         console.log('GET', json.url);
-                    }).finally(function() {
+                    }).catch(function() {
+                        check();
+                    }).then(function() {
                         check();
                     });
                 } 
                 else if (json.method == 'post') {
                     axios.post(json.url, json.data).then(function(data) {
                         console.log('POST', json.url, json.data);
-                    }).finally(function() {
+                    }).catch(function() {
+                        check();
+                    }).then(function() {
                         check();
                     });
                 }
