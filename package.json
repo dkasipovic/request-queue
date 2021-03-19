@@ -1,0 +1,16 @@
+{
+  "name": "request-queue",
+  "version": "1.0.0",
+  "description": "Queues requests to offload them from main php app",
+  "main": "request-queue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "http": "0.0.1-security",
+    "request": "^2.88.2"
+  }
+}
